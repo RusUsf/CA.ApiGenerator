@@ -15,8 +15,8 @@
             Tags                     = 'CleanArchitecture', 'API', 'CodeGeneration', 'CQRS', 'EntityFramework'
             ProjectUri               = 'https://github.com/RusUsf/CA.ApiGenerator'
             ReleaseNotes             = 'Initial preview release. Generates complete Clean Architecture solutions with CQRS boilerplate from existing databases. Supports SQL Server, PostgreSQL, SQLite.'
-            Prerelease               = 'preview'
+            Prerelease               = ''
             RequireLicenseAcceptance = $false
         }
     }
-}
+} 
