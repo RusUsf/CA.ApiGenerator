@@ -2,14 +2,20 @@
 
 Generate Clean Architecture API solutions from your existing database with a single command!
 
+> **Built on Jason Taylor's Clean Architecture Template** - This module provides PowerShell automation for [ca-sln](https://github.com/jasontaylordev/CleanArchitecture) to enable database-first solution generation.
+
 ## Installation
 
 ```powershell
-# Import the module
+# Step 1: Install Jason Taylor's CA template (required dependency)
+dotnet tool install -g ca-sln
+
+# Step 2: Import this module
 Import-Module .\CA.ApiGenerator\CA.ApiGenerator.psd1
 
-# Verify installation
+# Step 3: Verify installation
 Get-Command New-CAApiSolution
+ca-sln --version
 ```
 
 ## Quick Start
@@ -35,6 +41,8 @@ New-CAApiSolution `
 - ✅ Entity Framework Core integration
 - ✅ REST API controllers auto-generated
 - ✅ Integrated code generator for future entities
+- ✅ Simple PowerShell interface to ca-sln
+- ✅ Automated and interactive modes
 
 ## Parameters
 
@@ -49,9 +57,17 @@ See `Get-Help New-CAApiSolution -Examples` for more usage scenarios.
 ## Requirements
 
 - PowerShell 5.1 or higher
-- .NET SDK 6.0 or higher
+- .NET SDK 8.0 or higher
+- **ca-sln tool** (install via `dotnet tool install -g ca-sln`)
 - Access to target database
+
+## Credits
+
+- **Clean Architecture Template** by [Jason Taylor](https://github.com/jasontaylordev)
+- **PowerShell Wrapper** - This module adds database automation on top of ca-sln
 
 ## License
 
 MIT License - see LICENSE file for details
+
+This module wraps Jason Taylor's Clean Architecture template. Please review both licenses.

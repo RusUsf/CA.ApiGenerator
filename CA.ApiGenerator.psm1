@@ -15,6 +15,7 @@ function New-CAApiSolution {
 
     Examples:
     - SQL Server: "Server=localhost;Database=mydb;Integrated Security=true;"
+    - SQL Server: "Server=TargetServer\InstanceName;Database=mydb;Integrated Security=true;"
     - PostgreSQL: "Server=localhost;Port=5432;Database=mydb;User Id=postgres;Password=pwd;"
     - SQLite: "Data Source=app.db"
 
