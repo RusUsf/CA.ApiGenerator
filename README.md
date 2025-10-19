@@ -70,20 +70,6 @@ See `Get-Help New-CAApiSolution -Examples` for more usage scenarios.
 **Why?** The module uses EF Core Power Tools for entity generation, which expects plural table names and automatically singularizes them for entity classes.
 
 
-
-## Credits
-
-- **Clean Architecture Template** by [Jason Taylor](https://github.com/jasontaylordev)
-- **PowerShell Wrapper** - This module adds database automation on top of ca-sln
-
-![CA API Generator Architecture](./images/CA_API_Generator_PowerPoint.png)
-
-## License
-
-MIT License - see LICENSE file for details
-
-This module wraps Jason Taylor's Clean Architecture template. Please review both licenses.
-
 ## Connection String Examples
 
 ### SQL Server
@@ -102,3 +88,16 @@ This module wraps Jason Taylor's Clean Architecture template. Please review both
 | Default port | `Server=localhost;Database=MyDb;User Id=postgres;Password=Pass123;` |
 | Custom port | `Server=localhost;Port=5433;Database=MyDb;User Id=postgres;Password=Pass123;` |
 | Remote server | `Server=192.168.1.100;Port=5432;Database=MyDb;User Id=myuser;Password=Pass123;` |
+
+## Credits
+
+- **Clean Architecture Template** by [Jason Taylor](https://github.com/jasontaylordev)
+- **PowerShell Wrapper** - This module adds database automation on top of ca-sln
+
+![CA API Generator Architecture](./images/CA_API_Generator_PowerPoint.png)
+
+## License
+
+MIT License - see LICENSE file for details
+
+This module wraps Jason Taylor's Clean Architecture template. Please review both licenses.
