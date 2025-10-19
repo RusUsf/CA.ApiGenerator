@@ -39,7 +39,7 @@ New-CAApiSolution `
 ## Features
 
 - ✅ Generates complete Clean Architecture solution
-- ✅ Supports SQL Server, PostgreSQL, SQLite
+- ✅ Supports SQL Server, PostgreSQL
 - ✅ CQRS pattern with MediatR
 - ✅ FluentValidation for input validation
 - ✅ Entity Framework Core integration
@@ -52,7 +52,6 @@ New-CAApiSolution `
 
 - **ConnectionString** - Database connection string (optional, prompts if not provided)
 - **ProjectName** - API project name (optional, auto-detected from database)
-- **Interactive** - Force interactive prompts even when parameters provided
 
 ## Examples
 
@@ -84,3 +83,22 @@ See `Get-Help New-CAApiSolution -Examples` for more usage scenarios.
 MIT License - see LICENSE file for details
 
 This module wraps Jason Taylor's Clean Architecture template. Please review both licenses.
+
+## Connection String Examples
+
+### SQL Server
+
+| Scenario | Connection String |
+|----------|------------------|
+| Default instance (Windows Auth) | `Server=localhost;Database=MyDb;Integrated Security=true;` |
+| Default instance (SQL Auth) | `Server=localhost;Database=MyDb;User Id=sa;Password=Pass123;` |
+| Named instance (Windows Auth) | `Server=localhost\SQLEXPRESS;Database=MyDb;Integrated Security=true;` |
+| Named instance (SQL Auth) | `Server=MYSERVER\INSTANCE01;Database=MyDb;User Id=sa;Password=Pass123;` |
+
+### PostgreSQL
+
+| Scenario | Connection String |
+|----------|------------------|
+| Default port | `Server=localhost;Database=MyDb;User Id=postgres;Password=Pass123;` |
+| Custom port | `Server=localhost;Port=5433;Database=MyDb;User Id=postgres;Password=Pass123;` |
+| Remote server | `Server=192.168.1.100;Port=5432;Database=MyDb;User Id=myuser;Password=Pass123;` |
