@@ -66,6 +66,8 @@ See `Get-Help New-CAApiSolution -Examples` for more usage scenarios.
 - **Clean Architecture Template** by [Jason Taylor](https://github.com/jasontaylordev)
 - **PowerShell Wrapper** - This module adds database automation on top of ca-sln
 
+![CA API Generator Architecture](./images/CA_API_Generator_PowerPoint.png)
+
 ## License
 
 MIT License - see LICENSE file for details
