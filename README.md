@@ -8,7 +8,7 @@ Generate Clean Architecture API solutions from your existing database with a sin
 
 ```powershell
 # Step 1: Install Jason Taylor's CA template (required dependency)
-dotnet tool install -g ca-sln
+dotnet new install Clean.Architecture.Solution.Template
 
 # Step 2: Import this module
 Import-Module .\CA.ApiGenerator\CA.ApiGenerator.psd1
