@@ -10,12 +10,12 @@ Generate Clean Architecture API solutions from your existing database with a sin
 # Step 1: Install Jason Taylor's CA template (required dependency)
 dotnet new install Clean.Architecture.Solution.Template
 
-# Step 2: Import this module
-Import-Module .\CA.ApiGenerator\CA.ApiGenerator.psd1
+# Step 2: Install this module from PowerShell Gallery
+Install-Module -Name CA.ApiGenerator
 
 # Step 3: Verify installation
 Get-Command New-CAApiSolution
-ca-sln --version
+
 ```
 
 ## Quick Start
@@ -58,8 +58,15 @@ See `Get-Help New-CAApiSolution -Examples` for more usage scenarios.
 
 - PowerShell 5.1 or higher
 - .NET SDK 9.0 or higher
-- **ca-sln tool** (install via `dotnet tool install -g ca-sln`)
-- Access to target database
+- dotnet new install Clean.Architecture.Solution.Template
+
+### Database Requirements
+
+⚠️ **IMPORTANT**: All database tables MUST use plural names.
+
+**Why?** The module uses EF Core Power Tools for entity generation, which expects plural table names and automatically singularizes them for entity classes.
+
+
 
 ## Credits
 
