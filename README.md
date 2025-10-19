@@ -57,7 +57,7 @@ See `Get-Help New-CAApiSolution -Examples` for more usage scenarios.
 ## Requirements
 
 - PowerShell 5.1 or higher
-- .NET SDK 8.0 or higher
+- .NET SDK 9.0 or higher
 - **ca-sln tool** (install via `dotnet tool install -g ca-sln`)
 - Access to target database
 
