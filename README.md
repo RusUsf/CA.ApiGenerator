@@ -4,6 +4,8 @@ Generate Clean Architecture API solutions from your existing database with a sin
 
 > **Built on Jason Taylor's Clean Architecture Template** - This module provides PowerShell automation for [ca-sln](https://github.com/jasontaylordev/CleanArchitecture) to enable database-first solution generation.
 
+![CA API Generator Architecture](./images/CA_API_Generator_PowerPoint.png)
+
 ## Installation
 
 ```powershell
@@ -92,9 +94,13 @@ See `Get-Help New-CAApiSolution -Examples` for more usage scenarios.
 ## Credits
 
 - **Clean Architecture Template** by [Jason Taylor](https://github.com/jasontaylordev)
-- **PowerShell Wrapper** - This module adds database automation on top of ca-sln
-
-![CA API Generator Architecture](./images/CA_API_Generator_PowerPoint.png)
+  - Repository: https://github.com/jasontaylordev/CleanArchitecture
+  - Template: `Clean.Architecture.Solution.Template`
+- **dbatools** - PowerShell module for SQL Server automation
+  - Repository: https://github.com/dataplat/dbatools
+- **SimplySql** - PowerShell module for cross-database support (PostgreSQL, SQLite)
+  - Repository: https://github.com/mithrandyr/SimplySql
+- **PowerShell Wrapper** - This module adds database automation on top of these tools
 
 ## License
 
