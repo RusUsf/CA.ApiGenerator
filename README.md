@@ -61,9 +61,22 @@ See `Get-Help New-CAApiSolution -Examples` for more usage scenarios.
 
 ## Requirements
 
-- PowerShell 5.1 or higher
-- .NET SDK 9.0 or higher
-- dotnet new install Clean.Architecture.Solution.Template
+### What You Need to Install Manually
+
+- **PowerShell 5.1 or higher**
+- **.NET SDK 9.0 or higher** - [Download here](https://dotnet.microsoft.com/download/dotnet/9.0)
+
+### What Gets Auto-Installed
+
+The module automatically installs these dependencies when you first run it:
+
+- ✅ dbatools PowerShell module
+- ✅ SimplySql PowerShell module  
+- ✅ Clean.Architecture.Solution.Template (dotnet template)
+- ✅ dotnet-ef (Entity Framework Core Tools)
+
+**First Run**: Dependency checks take ~1-2 minutes  
+**Subsequent Runs**: Instant (dependencies already verified)
 
 ### Database Requirements
 
@@ -90,6 +103,32 @@ See `Get-Help New-CAApiSolution -Examples` for more usage scenarios.
 | Default port | `Server=localhost;Database=MyDb;User Id=postgres;Password=Pass123;` |
 | Custom port | `Server=localhost;Port=5433;Database=MyDb;User Id=postgres;Password=Pass123;` |
 | Remote server | `Server=192.168.1.100;Port=5432;Database=MyDb;User Id=myuser;Password=Pass123;` |
+
+## Troubleshooting
+
+### "Module failed to install dependencies"
+
+If automatic installation fails, you can install dependencies manually:
+
+```powershell
+# Install PowerShell modules
+Install-Module dbatools -Force -Scope CurrentUser
+Install-Module SimplySql -Force -Scope CurrentUser
+
+# Install .NET template
+dotnet new install Clean.Architecture.Solution.Template
+
+# Install EF tools
+dotnet tool install --global dotnet-ef
+```
+
+### ".NET SDK version too old"
+
+The module requires .NET 9.0 or higher. Download from:
+https://dotnet.microsoft.com/download/dotnet/9.0
+
+After installation, restart PowerShell and try again.
+
 
 ## Credits
 
