@@ -135,7 +135,7 @@ Built on top of:
 - dbatools by dataplat
 - SimplySql by mithrandyr
 
-See full documentation at: https://github.com/YourGitHubUsername/CA.ApiGenerator
+See full documentation at: https://github.com/RusUsf/CA.ApiGenerator
 '@
 
         # Prerelease string of this module
